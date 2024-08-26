@@ -39,3 +39,8 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	canSmoothWith = SMOOTH_GROUP_AIRLOCK + SMOOTH_GROUP_WINDOW_FULLTILE + SMOOTH_GROUP_WALLS
+
+// FLOORS
+
+/turf/open/floor
+	icon = 'icons/turf/floors.dmi'
