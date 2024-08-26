@@ -8600,4 +8600,5 @@
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\spitter.dm"
 #include "modular_nova\modules\xenos_nova_redo\code\xeno_types\warrior.dm"
 #include "modularmint\modules\wallening\code\wallening.dm"
+#include "modularmint\modules\wallening\code\airlocks.dm"
 // END_INCLUDE
