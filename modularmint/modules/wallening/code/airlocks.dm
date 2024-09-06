@@ -572,6 +572,31 @@
 */
 
 // Connecting to walls
+/obj/machinery/door/airlock/proc/Initialize(mapload)
+	. = ..()
+	var/odir = 0
+	var/atom/found = null
+	var/turf/north = get_turf(get_step(src,NORTH))
+	if(north.density)
+		found = north
+		odir = NORTH
+	var/turf/south = get_turf(get_step(src,SOUTH))
+	if(south.density)
+		found = south
+		odir = SOUTH
+	var/turf/east = get_turf(get_step(src,EAST))
+	if(east.density)
+		found = east
+		odir = EAST
+	var/turf/west = get_turf(get_step(src,WEST))
+	if(west.density)
+		found = west
+		odir = WEST
+	if(odir == NORTH || odir == SOUTH)
+		dir = EAST
+	else
+		dir = SOUTH
+	return odir
 
 /obj/machinery/door/airlock/proc/set_smooth_dir() //I fucking hate this code and so should you :)
 //	for(var/atom/obstacle in view(1, src)) //Ghetto ass icon smooth
@@ -622,6 +647,10 @@
 
 
 // Airlocks
+
+/obj/machinery/door/airlock
+	icon = 'modularmint/modules/wallening/icons/airlock/public.dmi'
+	overlays_file = 'modularmint/modules/wallening/icons/airlock/overlays.dmi'
 
 /obj/machinery/door/airlock/service
 	icon = 'modularmint/modules/wallening/icons/airlock/service.dmi'
