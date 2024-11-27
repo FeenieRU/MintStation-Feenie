@@ -478,6 +478,9 @@ BOMBCAP 20
 ## of ruins.
 LAVALAND_BUDGET 60
 
+## Mining Space Budget
+MININGSPACE_BUDGET 80
+
 ## Ice Moon Budget
 ICEMOON_BUDGET 90
 

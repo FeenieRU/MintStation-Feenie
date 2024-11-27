@@ -245,6 +245,12 @@ SUBSYSTEM_DEF(mapping)
 	if (lava_ruins.len)
 		seedRuins(lava_ruins, CONFIG_GET(number/lavaland_budget), list(/area/lavaland/surface/outdoors/unexplored), themed_ruins[ZTRAIT_LAVA_RUINS], clear_below = TRUE, mineral_budget = 15, mineral_budget_update = OREGEN_PRESET_LAVALAND)
 
+	// MINT ADD START
+	var/list/miningspace_ruins = levels_by_trait(ZTRAIT_MININGSPACE_RUINS)
+	if (miningspace_ruins.len)
+		seedRuins(miningspace_ruins, CONFIG_GET(number/miningspace_budget), list(/area/space/miningspace/surface/outdoors/unexplored), themed_ruins[ZTRAIT_MININGSPACE_RUINS], clear_below = TRUE, mineral_budget = 5, mineral_budget_update = OREGEN_PRESET_MININGSPACE)
+	// MINT ADD END
+
 	var/list/ice_ruins = levels_by_trait(ZTRAIT_ICE_RUINS)
 	if (ice_ruins.len)
 		// needs to be whitelisted for underground too so place_below ruins work
@@ -454,6 +460,10 @@ Used by the AI doomsday and the self-destruct nuke.
 
 	if(current_map.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
+	// MINT ADD START
+	else if(current_map.minetype == "miningspace")
+		LoadGroup(FailedZs, "Space", "map_files/Mining", "Space.dmm", default_traits = ZTRAITS_MININGSPACE)
+	// MINT ADD END
 	else if (!isnull(current_map.minetype) && current_map.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[current_map.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif
@@ -517,6 +527,10 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	var/list/banned = generateMapList("spaceruinblacklist.txt")
 	if(current_map.minetype == "lavaland")
 		banned += generateMapList("lavaruinblacklist.txt")
+	// MINT ADD START
+	else if(current_map.minetype == "miningspace")
+		banned += generateMapList("miningspaceruinblacklist.txt")
+	// MINT ADD END
 	else if(current_map.blacklist_file)
 		banned += generateMapList(current_map.blacklist_file)
 

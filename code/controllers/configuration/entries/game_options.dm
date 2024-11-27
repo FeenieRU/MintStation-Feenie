@@ -347,6 +347,13 @@
 	integer = FALSE
 	min_val = 0
 
+// MINT ADD START
+/datum/config_entry/number/miningspace_budget
+	default = 80
+	integer = FALSE
+	min_val = 0
+// MINT ADD END
+
 /datum/config_entry/number/icemoon_budget
 	default = 90
 	integer = FALSE

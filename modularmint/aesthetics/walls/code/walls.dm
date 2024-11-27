@@ -22,6 +22,11 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 
+/turf/closed/wall/mining
+	icon = 'modularmint/aesthetics/walls/icons/mining.dmi'
+	icon_state = "mining_wall-0"
+	base_icon_state = "mining_wall"
+
 // Modular false wall overrides
 /obj/structure/falsewall
 	icon = 'modularmint/aesthetics/walls/icons/wall.dmi'

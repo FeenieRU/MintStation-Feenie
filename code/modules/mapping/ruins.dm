@@ -98,6 +98,10 @@
 			SSore_generation.ore_vent_minerals = expand_weights(GLOB.ore_vent_minerals_lavaland)
 		if(OREGEN_PRESET_TRIPLE_Z)
 			SSore_generation.ore_vent_minerals = expand_weights(GLOB.ore_vent_minerals_triple_z)
+		// MINT ADD START
+		if(OREGEN_PRESET_MININGSPACE)
+			SSore_generation.ore_vent_minerals = expand_weights(GLOB.ore_vent_minerals_miningspace)
+		// MINT ADD END
 
 	//Set up the starting ruin list
 	for(var/key in ruins)
@@ -194,6 +198,10 @@
 									forced_ruins[linked] = target_z //I guess you might want a chain somehow
 								if(PLACE_LAVA_RUIN)
 									forced_ruins[linked] = pick(SSmapping.levels_by_trait(ZTRAIT_LAVA_RUINS))
+								// MINT ADD START
+								if(PLACE_MININGSPACE_RUIN)
+									forced_ruins[linked] = pick(SSmapping.levels_by_trait(ZTRAIT_MININGSPACE_RUINS))
+								// MINT ADD END
 								if(PLACE_SPACE_RUIN)
 									forced_ruins[linked] = pick(SSmapping.levels_by_trait(ZTRAIT_SPACE_RUINS))
 								if(PLACE_DEFAULT)

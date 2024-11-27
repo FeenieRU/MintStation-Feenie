@@ -33,3 +33,18 @@ GLOBAL_LIST_INIT(ore_vent_minerals_triple_z, list(
 		/datum/material/bluespace = 3,
 		/datum/material/plastic = 1,
 	))
+
+// MINT ADD START
+GLOBAL_LIST_INIT(ore_vent_minerals_miningspace, list(
+		/datum/material/iron = 24,
+		/datum/material/glass = 23,
+		/datum/material/plasma = 16,
+		/datum/material/titanium = 10,
+		/datum/material/silver = 8,
+		/datum/material/gold = 7,
+		/datum/material/diamond = 4,
+		/datum/material/uranium = 4,
+		/datum/material/bluespace = 3,
+		/datum/material/plastic = 1,
+	))
+// MINT ADD END

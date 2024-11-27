@@ -1,0 +1,19 @@
+"a" = (/turf/open/misc/asteroid/airless,/area/template_noop)
+"c" = (/turf/closed/mineral/random,/area/template_noop)
+"B" = (/mob/living/basic/pet/cat/space,/turf/open/misc/asteroid/airless,/area/template_noop)
+"R" = (/turf/template_noop,/area/template_noop)
+
+(1,1,1) = {"
+RRRccccRRRRR
+RRccaacccRRR
+RccaaaacccRR
+RcaaaaaaaccR
+Rcaaaaaaaacc
+RcaaaaBaaaac
+Rccaaaaaaacc
+RccaaaaaaccR
+RRccaaaacccR
+RRRcccaaccRR
+RRRRccccccRR
+RRRRRRRRRRRR
+"}

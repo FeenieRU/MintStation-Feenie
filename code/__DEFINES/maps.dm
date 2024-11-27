@@ -80,6 +80,7 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define ZTRAIT_AWAY "Away Mission"
 #define ZTRAIT_SPACE_RUINS "Space Ruins"
 #define ZTRAIT_LAVA_RUINS "Lava Ruins"
+#define ZTRAIT_MININGSPACE_RUINS "Mining Space Ruins" // MINT ADD
 #define ZTRAIT_ICE_RUINS "Ice Ruins"
 #define ZTRAIT_ICE_RUINS_UNDERGROUND "Ice Ruins Underground"
 #define ZTRAIT_ISOLATED_RUINS "Isolated Ruins" //Placing ruins on z levels with this trait will use turf reservation instead of usual placement.
@@ -138,6 +139,12 @@ Always compile, always use that verb, and always make sure that it works for wha
 	ZTRAIT_LAVA_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
 	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
+/// MINT ADD START: Z level traits for Mining Space
+#define ZTRAITS_MININGSPACE list(\
+	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_MININGSPACE_RUINS = TRUE, \
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2)
+// MINT ADD END
 ///Z level traits for Away Missions
 #define ZTRAITS_AWAY list(ZTRAIT_AWAY = TRUE)
 ///Z level traits for Secret Away Missions
@@ -167,6 +174,7 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define PLACE_SAME_Z "same" //On same z level as original ruin
 #define PLACE_SPACE_RUIN "space" //On space ruin z level(s)
 #define PLACE_LAVA_RUIN "lavaland" //On lavaland ruin z levels(s)
+#define PLACE_MININGSPACE_RUIN "miningspace" // MINT ADD
 #define PLACE_BELOW "below" //On z levl below - centered on same tile
 #define PLACE_ISOLATED "isolated" //On isolated ruin z level
 
