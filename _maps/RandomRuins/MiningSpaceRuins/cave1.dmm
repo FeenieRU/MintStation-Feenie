@@ -1,6 +1,6 @@
-"a" = (/turf/open/misc/asteroid/airless,/area/template_noop)
-"c" = (/turf/closed/mineral/random,/area/template_noop)
-"B" = (/mob/living/basic/pet/cat/space,/turf/open/misc/asteroid/airless,/area/template_noop)
+"a" = (/turf/open/misc/asteroid/airless,/area/ruin/space)
+"c" = (/turf/closed/mineral/random,/area/ruin/space)
+"B" = (/mob/living/basic/pet/cat/space,/turf/open/misc/asteroid/airless,/area/ruin/space)
 "R" = (/turf/template_noop,/area/template_noop)
 
 (1,1,1) = {"

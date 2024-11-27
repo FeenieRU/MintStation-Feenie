@@ -142,8 +142,10 @@ Always compile, always use that verb, and always make sure that it works for wha
 /// MINT ADD START: Z level traits for Mining Space
 #define ZTRAITS_MININGSPACE list(\
 	ZTRAIT_MINING = TRUE, \
+	ZTRAIT_LINKAGE = CROSSLINKED, \
 	ZTRAIT_MININGSPACE_RUINS = TRUE, \
-	ZTRAIT_BOMBCAP_MULTIPLIER = 2)
+	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
+	ZTRAIT_BASETURF = /turf/open/space/basic)
 // MINT ADD END
 ///Z level traits for Away Missions
 #define ZTRAITS_AWAY list(ZTRAIT_AWAY = TRUE)
